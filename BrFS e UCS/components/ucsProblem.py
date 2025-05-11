@@ -54,7 +54,7 @@ class Problem:
     def __init__(self, initialState: str, goal: str, actions):
         self.initialState = initialState
         self.goal = goal
-        self.actions: [] = actions
+        self.actions = actions
         print(bcolors.OKCYAN + f"\nProblema criado - ESTADO INICIAL: {self.initialState}, OBJETIVO: {self.goal}\n" + bcolors.ENDC)
 
     def goalTest(self, state: str):
