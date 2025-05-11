@@ -27,7 +27,7 @@ função BUSCA-EM-LARGURA(problema)
         borda ← INSIRA(filho, borda)
 '''
 
-from util.tree import Tree, newTreeExample
+from components.tree import Tree, newTreeExample
 
 def brFS(problem: Tree, goal):
     node = problem.root
