@@ -42,6 +42,7 @@ def brFS(problem: Tree, goal):
       if node.state == goal:
        return [node.path(), explored.__str__()]
       
+      # AÇÕES
       if node.left is not None:
          border.append(node.left)
       if node.right is not None:
