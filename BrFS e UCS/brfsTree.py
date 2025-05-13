@@ -61,6 +61,6 @@ def simulation(searchFor=20):
 
   print(f"\nBuscando por: {searchFor}")
   print(f"Caminho encontrado: {path}")
-  print(f"Explorados até o caminho: {explored}\n")
+  print(f"Explorados até o objetivo: {explored}\n")
 
 simulation()
