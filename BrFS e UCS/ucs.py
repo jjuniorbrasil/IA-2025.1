@@ -27,7 +27,8 @@ função BUSCA-DE-CUSTO-UNIFORME(problema)
 
 '''
 
-from components.ucsProblem import Node, Problem, bcolors, solution, actionsNE, actions
+from components.node import Node
+from components.ucsProblem import Problem, bcolors, solution, actionsNE, actions
 
 def uCS(problem: Problem):
     node: Node = Node(problem.initialState)

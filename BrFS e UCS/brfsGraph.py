@@ -27,7 +27,8 @@ função BUSCA-EM-LARGURA(problema)
         borda ← INSIRA(filho, borda)
 '''
 
-from components.brFSProblem import Node, Problem, bcolors, solution, actions
+from components.brFSProblem import Problem, bcolors, solution, actions
+from components.node import Node
 
 def brFS(problem: Problem):
     node: Node = Node(problem.initialState)
@@ -53,7 +54,7 @@ def brFS(problem: Problem):
                   return solution(node)
                 print(bcolors.OKGREEN + f"\t(Adicionando {childNode.state} à borda)" + bcolors.ENDC)
                 border.append(childNode)
-                
+
 problem = Problem('A', 'G', actions)
 
 brFS(problem)

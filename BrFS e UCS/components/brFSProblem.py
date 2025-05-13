@@ -21,27 +21,7 @@ actions = {
     'L': [], 'M': [], 'N': [], 'O': []
 }
 
-
-class Node:
-    def __init__(self, state: str, cost: int = 0, parent = None):
-        self.state = state
-        self.cost = cost
-        self.parent = parent
-        
-    def __repr__(self):
-        return f"Node({self.state}, {self.cost})"
-    
-    def path(self):
-        node = self
-        path_nodes = []
-
-        while node:
-            path_nodes.append(node)
-            node = node.parent
-
-        path_nodes.reverse()
-        return [n.state for n in path_nodes]
-
+from components.node import Node
 class Problem:
     def __init__(self, initialState: str, goal: str, actions):
         self.initialState = initialState
@@ -55,9 +35,6 @@ class Problem:
     def action(self, state):
         return self.actions.get(state, [])
     
-def orderHandler(node: Node): 
-    return node.cost
-
 def solution(node: Node):
     print(f"\n\tSolução encontrada até: {bcolors.UNDERLINE + bcolors.FAIL + node.state + bcolors.ENDC}")
     print("\t" + node.path().__str__())
