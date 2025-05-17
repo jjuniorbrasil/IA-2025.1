@@ -26,7 +26,6 @@ função BUSCA-EM-LARGURA(problema)
         
         borda ← INSIRA(filho, borda)
 '''
-
 from components.brFSProblem import Problem, bcolors, solution, actions
 from components.node import Node
 
